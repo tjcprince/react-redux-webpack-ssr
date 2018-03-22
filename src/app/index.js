@@ -8,7 +8,7 @@ import createStore from './store/createStore';
 const store = createStore(window.__INITIAL_STATE__); // eslint-disable-line no-underscore-dangle
 
 const render = (Component) => {
-  ReactDOM.render(
+  ReactDOM.hydrate(
     <Provider store={store}>
       <Router>
         <Component />
